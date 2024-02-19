@@ -1,0 +1,26 @@
+Advantages & Disadvantages of TrickyConcepts.
+
+GLOBAL Variables;
+These are declared or designed inside a function are in the Global scope.
+
+ADVANTAGES of using Global Variable;
+=>Easy access from all the function in a program.
+=> Used for storing constant.
+=>It helps to keep consistency.
+=> It's useful when multiple function are accessing the same data.
+
+DISADVANTAGES;
+=>Two many variables declare as Global, then they remain in the memory till program execution is completetd this can cause out of memory issue.
+=> It may give unpredictable result in multitasking environment.
+=>If Global variable are discontinue de to code refacturing, you'll need to change all the modules where they are called.
+
+LOCAL_SCOPE;
+
+ADVANTAGES;
+=>Variables declared or designed inside a function are in the local scope.
+=>It offer a guarrantee that the variable declared will remain intact while the task is running.
+=>Deleted as soon as any function is over and release the memory space it occupied.
+
+DISADVANTAGES;
+=>They have a very limited scope.
+=>

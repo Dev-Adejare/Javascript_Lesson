@@ -1,0 +1,34 @@
+// A JavaScript function is a block of code designed to perform a particular task.
+// A JavaScript function is executed when "something" invokes it (calls it).
+
+// Why Functions?
+// With functions you can reuse code.
+// You can write code that can be used many times.
+// You can use the same code with different arguments, to produce different results.
+
+
+
+// Terms used in function:-
+
+// Ways of declaring Fuction:
+ =>1.function declaration 
+ =>2.function expression & 
+ =>3.Arrow function
+
+//FUNCTION DECLARATION
+
+function square(number) { //params is passed in the parenthesis
+    //statement
+}
+
+square() // function call/ invovcation
+Function xpression is when you save a function declaration in a variable.
+
+
+
+//Function Expression.
+const nameFunction = function(params) {}
+
+
+//Arrow function.
+const arrowFn = ( ) => {}

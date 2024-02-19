@@ -31,7 +31,7 @@
 //Arithmetic Operators: Are used to do simple arithmetics.
 //Assignment Operators
 //Comparison Operators: // <, // >, // =
-// Examples are as follows;
+//Examples are as follows;
 
 // const a = 10
 // const b = 13
