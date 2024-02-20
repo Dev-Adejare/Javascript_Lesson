@@ -174,6 +174,10 @@ console.log(results);
  const prime = isPrime(3)
  console.log(prime)
 
+
+
+
+
  
   
 

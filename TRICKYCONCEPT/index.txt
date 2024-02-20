@@ -24,3 +24,23 @@ ADVANTAGES;
 DISADVANTAGES;
 =>They have a very limited scope.
 =>
+
+
+
+THREE TRICKYCONCEPT are the folowing;
+=> SCOPE
+=> CLOSURE
+=> HOISTING
+Hoisting is JavaScript's default behavior of moving all declarations to the top 
+of the current scope (to the top of the current script or the current function).
+
+//const a = 2 // something here is similar to func expression n and arrow func but its not similar to func declarartion
+// const b = 3
+
+=> CLOSURE
+//A closure is a function having access to the parent scope, even 
+after the parent function has closed.
+// The scope regarding a function inside a function.
+
+
+
