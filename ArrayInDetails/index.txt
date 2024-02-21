@@ -1,0 +1,40 @@
+ //Array => An array is a data type, which can hold more than one value:
+
+ An array can hold many values under a single name, and you can access the values by referring to an index number.
+
+ Variable is a way of storing data either permanently/temporary.
+ We have Global ways or LOcal ways of declaring a variable:
+
+ Arrays are Objects => {}object in Array
+Arrays are a special type of objects. The type of operator in JavaScript returns "object" for arrays.
+
+But, JavaScript arrays are best described as arrays.
+
+Arrays use numbers to access its "elements". In this example, person[0] returns John:
+
+
+//ARRAY-PUSH =>The push() method returns the new array length:
+//It add new element to the end of an ARRAY.
+
+const students =['Yemi', 'Sola', 'Grace', 'Maryam', 'Femi','Bola'];
+console.log(students);
+
+const pushed = students.push('Babe', 'Kemi', 'Sola', 'Akin');
+console.log(pushed);
+console.log(students);
+
+// POP METHOD => The pop() method removes the last element from an array
+const numbers = [3, 4, 5, 6, 7, 8, 9];
+console.log(numbers)
+
+const popped = numbers.pop();
+console.log(popped);
+console.log(numbers);
+
+
+const fruits = ['Mango', 'Cashew', 'Apple', 'Strawberry'];
+console.log(fruits);
+
+const poppe = fruits.pop();
+console.log(poppe);
+console.log(fruits);
