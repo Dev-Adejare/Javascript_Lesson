@@ -38,3 +38,67 @@ console.log(fruits);
 const poppe = fruits.pop();
 console.log(poppe);
 console.log(fruits);
+
+
+SHIFT => The shift() method removes the first item of an array.
+The shift() method changes the original array.
+The shift() method returns the shifted element.
+
+
+UNSHIFT => The unshift() method adds new elements to the beginning of an array.
+The unshift() method overwrites the original array
+
+SPLICE => The splice() method adds and/or removes array elements.
+The splice() method overwrites the original array.
+
+/***************SLICE()****************/
+// The slice() method extracts a part of a string.
+// The slice() method returns the extracted part in a new string.
+// The slice() method does not change the original string
+
+/******************toString()********************/ 
+// The toString() method returns a string as a string.
+// The toString() method does not change the original string.
+// The toString() method can be used to convert a string object into a string.
+
+
+//***************includes()***************** */
+// The includes() method returns true if an array contains a specified value.
+// The includes() method returns false if the value is not found.
+// The includes() method is case sensitive.
+
+/*******************sort()********************/ 
+// The sort() method sorts an array alphabetically:
+
+numbs.sort((a,b) => a-b); We make use of this function called {callback function} to arrange the array in order i.e from the smallest to the highest.
+numbs.sort((a,b) => b-a); We make use of this function called {callback function} to arrange the array in order i.e from the highest to the smallest.
+
+console.log(numbs);
+
+
+/****************** indexOf()*********************/ 
+// The indexOf() method returns the position of the first occurrence of a value in a string.
+// The indexOf() method returns -1 if the value is not found.
+// The indexOf() method is case sensitive
+
+
+
+/******************** lastIndexOf()***********************/
+The lastIndexOf() method returns the index (position) of the last occurrence of a specified value in a string.
+The lastIndexOf() method searches the string from the end to the beginning.
+The lastIndexOf() method returns the index from the beginning (position 0).
+The lastIndexOf() method returns -1 if the value is not found.
+The lastIndexOf() method is case sensitive
+
+
+/****************for Each()*****************/
+The forEach() method calls a function for each element in an array.
+The forEach() method is not executed for empty elements.
+
+/**************Map METHOD**************/ 
+// You can create a Map by passing an Array to the new Map() constructor:
+// Passing an Array to new Map()
+// Create a Map and use Map.set()
+
+
+
