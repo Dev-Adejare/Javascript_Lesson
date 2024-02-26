@@ -352,7 +352,7 @@ const filteredNumbers = [];
 
 
 
-// for loop
+// for Loop Filter-Format
 
 for(let i = 0; i < numbers.length; i++){
          if(numbers[i] < 0){
@@ -360,6 +360,40 @@ for(let i = 0; i < numbers.length; i++){
          }
        }
        console.log(filteredNumbers);
+
+
+       let employees = [
+        {name: "Naheem", overtime: 10},
+        {name: "Abdullah", overtime: 5},
+        {name: "Anate", overtime: 4},
+        {name: "Seyi", overtime: 7},
+        {name: "Soliu", overtime: 9},
+        {name: "Kenny", overtime: 12},
+       ]
+
+     const employeesToreward = employees.filter
+     ((employee) => {
+        return employee.overtime >= 7
+     })
+
+     const employeesTorewardNames = employeesToreward.map
+     ((employee) => {
+        return employee.name
+     })
+
+     console.log(employeesToreward)
+     console.log(employeesTorewardNames)
+
+
+     employeesTorewardNames.forEach((name) => {
+        console.log(`Hi ${name}, Congratulations you have receive an award for your hardwork`)
+     })
+
+     
+
+
+
+
 
 
       
