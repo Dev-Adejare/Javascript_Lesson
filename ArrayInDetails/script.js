@@ -411,6 +411,36 @@ for(let i = 0; i < numbers.length; i++){
 
         console.log(acquaticAnimals);
 
+
+        //ARRAY FIND => The find() method returns the value of the first element that passes a test.
+
+        const digits = [1, 2, 3, 4, 5, 6, 7, 8, 9,]
+
+        const value = digits.find((digit) => {
+            return digit > 4
+        })
+
+        console.log(value);
+
+
+        const states = [
+            'Ogun State',
+            'Kogi State',
+            'Anambra State',
+            'Lagos State',
+            'Benue State',
+
+        ]
+
+        const state = states.find((state) => {
+            return  state.startsWith('L')
+       
+
+        })
+
+        console.log(state);
+
+
      
 
 
