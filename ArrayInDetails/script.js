@@ -518,7 +518,7 @@ const studentAssessment = [
     {name: "Oluwatumise", scores: 8},
     {name: "Bode", scores: 4},
     {name: "Hayzed", scores: 3},
-    {name: "Abdullah", scores: 9},
+    {name: "Abdullah", scores: 92},
 ]
 
 const studentsAboveSix = studentAssessment.filter((student) => {
@@ -551,6 +551,16 @@ const studentAboveFromSixi = studentS.filter((student) => {
 studentAboveFromSixi.forEach((student) => {
     console.log(`Hi ${student.name}, here is your reward for scoring above 6`)
 })
+
+// ARRAY AND SOME EVERY
+
+//ARRAY SOME() () =>The some() method checks if any array elements pass a test (provided as a callback function).
+const box = [1, 2, 3, 4, 5, 6, 7]
+console.log(box.some((el) => {return el < 8})); //el is just a variable name
+
+
+//ARRAY EVERY() => This method executes a function for each array element.
+console.log(box.every((el) => {return el < 4}));  //el is just a variable name
 
 
 
