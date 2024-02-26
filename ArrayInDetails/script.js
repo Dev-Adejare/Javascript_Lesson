@@ -292,7 +292,7 @@
 
 // /**********Exp 4************/ 
 
-// names.forEach((name) => console.log(`Congratulations ${name}, youn don smoke weed`));
+// names.forEach((name) => console.log(`Congratulations ${name}, you don smoke weed`));
 
 
 // /**************Map METHOD**************/ 
@@ -386,8 +386,30 @@ for(let i = 0; i < numbers.length; i++){
 
 
      employeesTorewardNames.forEach((name) => {
-        console.log(`Hi ${name}, Congratulations you have receive an award for your hardwork`)
+        console.log(`Hi ${name}, Congratulations you have receive an award for your hardwork.`)
      })
+
+
+
+     for (let i = 0; i <  employeesTorewardNames.length; i++) {
+        console.log(`${employeesTorewardNames[i]}, you have recieved an award.`)};
+
+
+
+
+        const creatures = [
+            {Animal: "Shark", habitat: "ocean"},
+            {Animal: "Whale", habitat: "ocean"},
+            {Animal: "Hippopotamus", habitat: "Lake"},
+            {Animal: "Lion", habitat: "savanna"},
+            {Animal: "Monkey", habitat: "Jungle"},
+        ]
+
+        const acquaticAnimals = creatures.filter((creature) => {
+            return creature.habitat === "ocean" || creature.habitat === "Lake"
+        })
+
+        console.log(acquaticAnimals);
 
      
 
