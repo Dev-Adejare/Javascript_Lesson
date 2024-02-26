@@ -1,0 +1,5 @@
+//OBJECTS
+
+//Objects are used to represent real life datas
+
+// Object is an unordered collection of related data in form of key and value pairs

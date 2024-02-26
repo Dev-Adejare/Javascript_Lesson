@@ -1,0 +1,52 @@
+//STRINGS=>A JavaScript string is zero or more characters written inside quotes
+e.g
+let text = "John Doe";
+Strings are for storing text
+Strings are written with quotes
+
+TYPES OF STRINGS; 
+=> // SINGLE QUOTE (' ')
+=> // DOUBLE QUOTE (" ")
+=> // BACKTICKS ( ` `)
+
+
+DATE => 21/2/2024
+
+//SPLIT-METHOD => Description
+// The split() method splits a string into an array of 
+// substrings.The split(' ') method returns the new array.
+// The split() method does not change the original string.
+// If (" ") is used as separator, the string is split between words.
+
+// The split() method splits a string into an array of substrings.
+// The split() method returns the new array.
+// The split() method does not change the original string.
+// If (" ") is used as separator, the string is split between words.
+
+
+//REVERSE( ) => The reverse() method reverses the order of the elements in an array.
+// The reverse() method overwrites the original array
+
+
+const namezi = "Adebisi and Omotola";
+const split11 = namezi.split(' ')
+console.log(split11);
+
+const reverse$ = split11.reverse()
+console.log(reverse$);
+
+//JOIN METHOD => The join() Method
+// The join() method joins array elements into a string.
+// It this example we have used " * " as a separator between the elements:
+
+const join1 = reverse$.join(' ');
+console.log(join1);
+
+//REPEAT() METHOD => The repeat() method returns a string with a number of copies of a string.
+//The repeat() method does not change the original string.
+
+//TRIM() METHOD => The trim() method removes whitespace from both sides of a string
+
+Example 
+const trim = "  @example.com  "
+console.log(trim.trim());
