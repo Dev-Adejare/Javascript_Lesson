@@ -562,10 +562,29 @@ console.log(box.some((el) => {return el < 8})); //el is just a variable name
 //ARRAY EVERY() => This method executes a function for each array element.
 console.log(box.every((el) => {return el < 4}));  //el is just a variable name
 
+//Array Reduce() => loops through the array and return the sum of the array. It takes two properties: a callback function and an initial value. the call back function takes two parameters which are acccumulator and value,
 
+const boxes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+const answer = boxes.reduce((accumulator, value) => {
+    return accumulator + value
+}, 0)
+
+console.log(answer);
+
+//Explanation
+// 0 + 1 = 1 => accumulator
+// 1 + 2 = 3 => accumulator
+// 3 + 3 = 6 => accumulator
+// 6 + 4 = 10 => accumulator
+// 10 + 5 = 15 => accumulator
+// 15 + 6 = 21 => accumulator
+// 21 + 7 = 28 => accumulator
+// 28 + 8 = 36 => accumulator
+// 36 + 9 = 45 => accumulator
+// 45 + 10 = 55 => accumulator
 
      
-
 
 
 

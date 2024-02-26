@@ -124,5 +124,8 @@ The every() method returns false if the function returns false for one element.
 The every() method does not execute the function for empty elements.
 The every() method does not change the original array.
 
+//Array Reduce() loops through the array and return the sum of the array.
+It takes two properties: a callback function and an initial value. the call back function takes two parameters which are acccumulator and value,
+
 
 
