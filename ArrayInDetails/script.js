@@ -433,12 +433,125 @@ for(let i = 0; i < numbers.length; i++){
         ]
 
         const state = states.find((state) => {
-            return  state.startsWith('L')
+            return  state.startsWith('A');
        
 
         })
 
         console.log(state);
+
+
+        //CLASS-WORK
+        //A student Assessment took place, with a total mark of 10, Give us 7 students and mark them over 10, now give a reward to each students with a score over the mark of 6
+
+
+        
+       let Students = [
+        {name: "Naheem", mark: 9},
+        {name: "Abdullah", mark: 8},
+        {name: "Anate", mark: 5},
+        {name: "Seyi", mark: 7},
+        {name: "Soliu", mark: 3},
+        {name: "Kenny", mark: 8},
+        {name: "Khodijah", mark: 8},
+       ]
+
+       const StudentsToreward = Students.filter
+     ((student) => {
+        return student.mark > 6;
+     })
+
+     const StudentsTorewardNames = StudentsToreward.map
+     ((student) => {
+        return student.name
+     })
+
+
+     console.log(StudentsToreward);
+     console.log(StudentsTorewardNames);
+
+
+     StudentsTorewardNames.forEach((name) => {
+        console.log(`Hi ${name}, Excellent and good of you, you scored above 6marks.`)
+     })
+
+
+
+
+
+     // CLASS WORK
+
+// A student Assessment took place, with a total mark of 10, Give us 7 students and mark them over 10, now give a reward to each students with a score over the mark of 6.
+
+const studentS = [
+    {name: "Soliu", score: 4},
+    {name: "Hayzed", score: 7},
+    {name: "Kenny", score: 3},
+    {name: "Eef", score: 8},
+    {name: "Abdullahi", score: 2},
+    {name: "Zainab", score: 5},
+    {name: "Tunmise", score: 9},
+]
+
+const studentAboveFromSix = studentS.filter((student) => {
+    if (student.score > 6 && student.score <= 10) {
+        return student.score;
+    }
+    
+})
+
+const rewardStudents = studentAboveFromSix.map((student) => {
+    return student.name;
+})
+
+rewardStudents.forEach((name) => {
+    console.log(`Hi ${name}, here is your reward for scoring above 6`)
+})
+
+
+//Class-solution
+
+const studentAssessment = [
+    {name: "Nafisah", scores: 6},
+    {name: "Zainab", scores: 7},
+    {name: "soliu", scores: 5},
+    {name: "Oluwatumise", scores: 8},
+    {name: "Bode", scores: 4},
+    {name: "Hayzed", scores: 3},
+    {name: "Abdullah", scores: 9},
+]
+
+const studentsAboveSix = studentAssessment.filter((student) => {
+    return student.scores > 6
+})
+
+console.log(studentsAboveSix)
+
+const studentName = studentsAboveSix.map((student) =>{
+    return student.name
+})
+
+console.log(studentName);
+
+studentName.forEach((student) =>{
+    console.log(`Hi ${student}, You have been promoted to the next class`)
+})
+
+
+
+// another ways
+
+
+const studentAboveFromSixi = studentS.filter((student) => {
+    if (student.score > 6 && student.score <= 10) {
+        return student.score;
+    }
+    
+})
+studentAboveFromSixi.forEach((student) => {
+    console.log(`Hi ${student.name}, here is your reward for scoring above 6`)
+})
+
 
 
      
