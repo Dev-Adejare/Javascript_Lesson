@@ -116,7 +116,7 @@ const employees = {
 const employeeInfo = Object.keys(employees)
 console.log(employeeInfo);
 
-// Object-Value => this method creates and returns an array containing the "value" of an "Object".
+// Object-Value () => this method creates and returns an array containing the "value" of an "Object".
 const session = {
    id: 1,
    date: "27-feb-2024",
@@ -128,7 +128,7 @@ const session = {
 const sessionValue = Object.values(session)
 console.log(sessionValue);
 
-//Object-Entries => this method creates a nested array of a key and values pairs of an object.
+//Object-Entries () => this method creates a nested array of a key and values pairs of an object.
 
 const operatingsystem = {
     name: "Linux",
@@ -138,6 +138,68 @@ const operatingsystem = {
 
 const operatingSystemInfo = Object.entries(operatingsystem)
 console.log(operatingSystemInfo);
+
+//Object-Freeze () =>  This method prevents modification of existing properties and also prevent addition of amother property or removal of a property
+
+const user = {
+    username: "John",
+    password: 12345
+}  
+
+const userInfo = Object.freeze(user)
+console.log(userInfo);
+
+userInfo.username = "Kenny"
+console.log(userInfo);
+
+const userOne = {
+    userName: "John",
+    password: 12345
+}
+
+
+
+//Object-Seal () => this method prevents new properties from being added or removed.
+const userInfo1 = Object.seal(userOne)
+userInfo1.userName = "Az"
+userInfo1.age = 32
+console.log(userInfo1);
+
+
+
+let x 
+
+const person = {
+    name: "Joseph",
+    age: 25,
+    isAdmin: true,
+    
+    address: {
+        street: "B28, pegamut strt, ikeshi",
+        city: "Ota",
+        state: "Ogun state"
+    },
+
+    hobbies: ["Music", "Sport"]
+}
+
+//assesing an array inside an pobject
+
+x = person.hobbies[0];
+let y = person["hobbies"][1];
+console.log(x, y);
+
+// x = [person.hobbies[0], person.hobbies[1]];
+// console.log(x);
+
+//updating a property
+person.name = "Bode"
+console.log(person);
+
+person.address.street = "ile akuji, ita adamu"
+console.log(person);
+
+
 
 
 

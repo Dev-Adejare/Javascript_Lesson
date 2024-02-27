@@ -45,7 +45,7 @@ name = person.fullName;
    // 1. Object-Keys()
    // 2. Object-Value()
    // 3. Object-Entries()
-   // 4. Object-Frezeez()
+   // 4. Object-Freeze()
    // 5. Object-Seal()
 
 OBJECT KEYS () => The Object.keys() method returns an Array Iterator object with the keys of an object.
@@ -54,3 +54,7 @@ The Object.keys() method does not change the original object
 OBJECT VALUE () => // Object-Value => this method creates and returns an array containing the "value" of an "Object".
 
 OBJECT-ENTRIES () => //Object-Entries => this method creates a nested array of a key and values pairs of an object.
+
+OBJECTS-FREZEEZE () => //Object-Freeze () =>  This method prevents modification of existing properties and also prevent addition of amother property or removal of a property.
+
+//Object-Seal () => this method prevents new properties from being added or removed.
