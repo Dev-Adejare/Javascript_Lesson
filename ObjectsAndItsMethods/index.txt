@@ -58,3 +58,12 @@ OBJECT-ENTRIES () => //Object-Entries => this method creates a nested array of a
 OBJECTS-FREZEEZE () => //Object-Freeze () =>  This method prevents modification of existing properties and also prevent addition of amother property or removal of a property.
 
 //Object-Seal () => this method prevents new properties from being added or removed.
+
+
+UPDATING AN OBJECT
+//Delete a property 
+//assesing an array inside an pobject
+//Adding function to an object => When adding a function to an Object, it allpws to make use of only Function Experession
+
+  //VALUE & REFERENCE 
+      //Copying Primitive Value => Here, we deals with copying numbers & copying strings.

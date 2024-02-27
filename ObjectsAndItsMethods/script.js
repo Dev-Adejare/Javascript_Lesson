@@ -193,7 +193,7 @@ console.log(x, y);
 // console.log(x);
 
 //updating a property
-person.name = "Bode"
+person.name = "Adewale"
 console.log(person);
 
 person.address.street = "ile akuji, ita adamu"
@@ -203,6 +203,54 @@ console.log(person);
 
 delete person.address.state
 console.log(person);
+
+delete person.address.city
+console.log(person);
+
+//Adding function to an object => When adding a function to an Object, it allpws to make use of only Function Experession
+
+person.greet = function() {
+    console.log(`Hello, my name is ${this.name}`)
+}
+    
+person.greet();
+
+      //VALUE & REFERENCE 
+      //Copying Primitive Value => Here, we deals with copying numbers & copying strings.
+
+//Copying Numbers
+let x1 = 1
+let y1 = x1;
+
+x1 = 2
+console.log(x1)
+console.log(y1)
+
+//Copying Strings
+ let firstPerson = "Mark"
+ let secondPerson = firstPerson
+
+ firstPerson = "Austin"
+ console.log(firstPerson);
+ console.log(secondPerson);
+
+       //VALUE & REFERENCE 
+      //Copying Primitive Value => Here, we deals with copying numbers & copying strings.
+
+      //Copying Complex Value
+
+      //copying Arrays
+
+      const animals = ["dogs", "cats"];
+      const otherAnimals = animals
+
+      animals.push("Goat");
+      console.log(animals);
+      console.log(otherAnimals);
+
+
+
+
 
 
 
