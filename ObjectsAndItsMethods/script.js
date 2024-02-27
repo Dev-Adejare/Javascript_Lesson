@@ -63,9 +63,30 @@ const dog = {
     }
 }
 
-dog.listAllProperties()
+dog.listAllProperties();
 
 
+const myObject = {
+    myMethod1: () => {}, // Arrow function
+    myMethod2: function () {}, // Function declaration
+}
+
+
+
+
+
+//BUILT-IN-METHOD WITH THE USE OF ARROW FUNCTION
+const animal = {
+    name: "fluffy orange",
+    age: 10,
+
+    bark: () => {
+        console.log("woof woof!");
+    }
+}
+
+console.log(animal.name);
+animal.bark();
 
 
 
