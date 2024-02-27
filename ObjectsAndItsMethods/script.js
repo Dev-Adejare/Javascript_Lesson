@@ -199,6 +199,11 @@ console.log(person);
 person.address.street = "ile akuji, ita adamu"
 console.log(person);
 
+//Delete a property 
+
+delete person.address.state
+console.log(person);
+
 
 
 
