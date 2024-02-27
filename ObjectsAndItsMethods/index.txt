@@ -38,3 +38,19 @@ If you access the fullName property, without (), it will return the function def
 
 Example
 name = person.fullName;
+
+
+//OBJECT-METHODS CONSIT OF THE FOLLOWING:
+
+   // 1. Object-Keys()
+   // 2. Object-Value()
+   // 3. Object-Entries()
+   // 4. Object-Frezeez()
+   // 5. Object-Seal()
+
+OBJECT KEYS () => The Object.keys() method returns an Array Iterator object with the keys of an object.
+The Object.keys() method does not change the original object
+
+OBJECT VALUE () => // Object-Value => this method creates and returns an array containing the "value" of an "Object".
+
+OBJECT-ENTRIES () => //Object-Entries => this method creates a nested array of a key and values pairs of an object.

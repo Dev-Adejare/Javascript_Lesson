@@ -82,11 +82,69 @@ const animal = {
 
     bark: () => {
         console.log("woof woof!");
+        return "woof woof!";
     }
 }
 
 console.log(animal.name);
 animal.bark();
+
+console.log(animal.age);
+console.log(animal.bark());
+
+   //OBJECT-METHODS CONSIT OF THE FOLLOWING:
+
+   // 1. Object-Keys()
+   // 2. Object-Value()
+   // 3. Object-Entries()
+   // 4. Object-Frezeez()
+   // 5. Object-Seal()
+//OBJECT KEYS () => The Object.keys() method returns an Array Iterator object with the keys of an object.
+//The Object.keys() method does not change the original object
+
+
+
+const employees = {
+    boss: " Kenny",
+    secretary: "Naheem",
+    sales: "Zainab",
+    account: "Bola",
+    cleaner: "ola"
+}
+
+// Object.keys
+const employeeInfo = Object.keys(employees)
+console.log(employeeInfo);
+
+// Object-Value => this method creates and returns an array containing the "value" of an "Object".
+const session = {
+   id: 1,
+   date: "27-feb-2024",
+   device: "Mobile",
+   browser: "chrome",
+}
+
+//Object-Value
+const sessionValue = Object.values(session)
+console.log(sessionValue);
+
+//Object-Entries => this method creates a nested array of a key and values pairs of an object.
+
+const operatingsystem = {
+    name: "Linux",
+    version: 18.04,
+    license: "open source"
+}
+
+const operatingSystemInfo = Object.entries(operatingsystem)
+console.log(operatingSystemInfo);
+
+
+
+   
+
+
+
 
 
 
