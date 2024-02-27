@@ -248,6 +248,32 @@ console.log(y1)
       console.log(animals);
       console.log(otherAnimals);
 
+      // Copying Objects
+
+      const data = {
+        firstName: "Oloyede",
+        lastName: "Ahaji"
+      }
+
+      const otherdata = data;
+      console.log(data);
+      console.log(data === otherdata);
+
+
+      // EQUALITY
+
+      const person1 = {
+        firstName: "Adeola"
+      }
+      const otherPerson1 = {
+        firstName: "Adeola"
+      }
+
+      
+      console.log(person1.firstName === otherPerson1.firstName);
+      console.log(person1 === otherPerson1);
+
+
 
 
 
