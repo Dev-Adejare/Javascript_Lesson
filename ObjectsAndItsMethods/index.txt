@@ -55,7 +55,7 @@ OBJECT VALUE () => // Object-Value => this method creates and returns an array c
 
 OBJECT-ENTRIES () => //Object-Entries => this method creates a nested array of a key and values pairs of an object.
 
-OBJECTS-FREZEEZE () => //Object-Freeze () =>  This method prevents modification of existing properties and also prevent addition of amother property or removal of a property.
+OBJECTS-FREEZE () => //Object-Freeze () =>  This method prevents modification of existing properties and also prevent addition of amother property or removal of a property.
 
 //Object-Seal () => this method prevents new properties from being added or removed.
 

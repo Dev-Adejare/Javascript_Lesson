@@ -271,7 +271,9 @@ console.log(y1)
 
       
       console.log(person1.firstName === otherPerson1.firstName);
+      console.log(person1.firstName !== otherPerson1.firstName);
       console.log(person1 === otherPerson1);
+      console.log(person1 !== otherPerson1);
 
 
 
