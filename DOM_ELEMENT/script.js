@@ -18,4 +18,7 @@ console.log(submitBtn);
 
 submitBtn.addEventListener('click', ()=> {
     alert('Its closing time already')
-})
+});
+
+
+//DOM_EXERCISE
