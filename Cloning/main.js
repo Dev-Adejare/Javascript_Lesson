@@ -92,22 +92,95 @@ const originalObject = {
 
 
 //Exp 2;
-  const originalObj = {
-    name: 'Bash',
-    age: 20,
-    address: {
-      city: 'Pegamut',
-      country: 'Ogun',
-    },
-  };
+//   const originalObj = {
+//     name: 'Bash',
+//     age: 20,
+//     address: {
+//       city: 'Pegamut',
+//       country: 'Ogun',
+//     },
+//   };
   
-  const clonedObj = Object.assign({}, originalObj);
+//   const clonedObj = Object.assign({}, originalObj);
 
-  clonedObj.name = 'Naphy';
-  clonedObj.address.city = 'Elejigbo';
-  console.log("originalObj", originalObj);
-  console.log("clonedObj", clonedObj);
+//   clonedObj.name = 'Naphy';
+//   clonedObj.address.city = 'Elejigbo';
+//   console.log("originalObj", originalObj);
+//   console.log("clonedObj", clonedObj);
 
+  //Spreading Operator (Merged)
+  const arr = [1, 2, 3, 4];
+  const arr2 = [5, 6, 7, 8];
+
+  const merged = [...arr, ...arr2];
+   console.log(merged);
+
+   const text = {name: "Bode"};
+   const numz = [1, 2, 3, 4];
+
+   const cloneMerged = {...text, numz:[...numz]};
+
+   cloneMerged.name = "Hayzed";
+   cloneMerged.numz.push(5);
+
+   console.log(text);
+   console.log(numz);
+   console.log(cloneMerged);
+
+
+   //DEEP_CLONING =>deep clone is an object in javascript. this means creating a new oject that is
+//  entirely sepearated from the original object, such that change in the 
+// new object do not affect the original and vice versa. this will creste a new object but
+// nested object will still be reference to the original one
+
+const details = {
+    firstName: "Kenny",
+    car: {
+        brand: "Toyota",
+        wheel: 4,
+        color: "Red"
+    }
+}
+
+const stringifiedDetails = JSON.stringify(details);
+console.log(stringifiedDetails);
+
+const newDetails = JSON.parse(stringifiedDetails);
+console.log(newDetails);
+
+newDetails.car.color = "Blue";
+
+console.log(details.car.color);
+console.log(newDetails.car.color);
+
+// const newDetails = {...details};
+// newDetails.firstName = "Mike";
+
+// newDetails.car.color = "blue";
+
+
+// console.log(details);
+// console.log(newDetails);
+
+
+const originalobj = {
+    name: "Zainab",
+    age: 12,
+    address: {
+        local: "Agege wa",
+        area: "Baba Yemi"
+    }
+}
+
+const cloneObj = JSON.parse(JSON.stringify(originalobj));
+
+cloneObj.name = 'Soliu';
+cloneObj.age = 54;
+cloneObj.address.local = 'Pegamut';
+cloneObj.address.area = 'Mujahidun';
+
+console.log(originalobj);
+console.log(cloneObj);
 
 
 

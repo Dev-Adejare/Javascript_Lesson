@@ -15,4 +15,21 @@ Another way to create a shallow copy of an object in JavaScript is to use the sp
 
  Object.assign()
 One way to create a shallow copy of an object in JavaScript is to use the Object.assign() method. 
-This method takes two or more objects as arguments and returns a new object, which is a combination of all the source objects' properties.
+`1This method takes two or more objects as arguments and returns a new object, which is a combination of all the source objects' properties.
+
+JSON.stringify() converts a JavaScript object into a JSON string, while JSON.parse() converts a JSON string back into a JavaScript object.
+
+In this example, we first convert the original object into a JSON string using JSON.stringify(), and then create a new object by parsing the JSON string using JSON.parse(). This method creates a deep copy of the original object, as all the inner objects are also recursively copied.
+
+However, this method has some limitations:
+
+It can be slow for large objects, as it involves string conversion and parsing.
+It only works with objects that can be serialized to JSON. Objects with circular references, functions, or non-serializable properties (such as Date, RegExp, or Map and Set) cannot be cloned using this method.
+
+
+JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax. It is commonly used for transmitting data in web applications (e.g., sending some data from the server to the client, so it can be displayed on a web page, or vice versa).
+
+JSON exists as a string — useful when you want to transmit data across a network. It needs to be converted to a native JavaScript object when you want to access the data. This is not a big issue — JavaScript provides a global JSON object that has methods available for converting between the two.
+
+JSON structure
+As described above, JSON is a string whose format very much resembles JavaScript object literal format. You can include the same basic data types inside JSON as you can in a standard JavaScript object — strings, numbers, arrays, booleans, and other object literals. This allows you to construct a data hierarchy, like so:
