@@ -177,24 +177,101 @@ const third_cohort = new Cohort("Wale", 25, "pounded_Yam", +23490455553, new Dat
 
 
  //Exercise 2 =>
- const Shapez = class RectShape {
+ const RectShape = class Rectangle {
     constructor(length, breath) {
         this.length = length;
         this.breath = breath;
 
     }
 
-    get method() {
-        return this.area();
+    get area() { //getter function
+        return this.calc();
     
     }
-    area() {
-        return {area: this.length * this.breath};
+    calc() { //method
+            return {area: this.length * this.breath}
     }
  }
 
- const Shap = new Shapez (20, 10);
- console.log(Shap.method)
+ const square = new RectShape (20, 10);
+ console.log(square.area);
+
+ //Difference btw CONST & CLASS
+
+//  const detailOne = {
+//     name: "Class Captain",
+//     age: 540,
+//     isBlack: false
+//  }
+//  const detailTwo = {
+//     name: "Baba Oloye",
+//     age: 640,
+//     isBlack: true
+//  }
+
+//  const getDetailOne = new detailOne()
+//  console.log(getDetailOne)
+
+class Detail {
+    constructor(name, age, isPretty) {
+        this.name = name;
+        this.age = age;
+        this.isPretty = isPretty;
+    }
+}
+
+const detailOne = new Detail("Bash", 12, false);
+const detailTwo = new Detail("Nafi", 10, false);
+const detailThree = new Detail("Bode", 2, true);
+
+const array = [detailOne, detailTwo, detailThree];
+array.push(detailThree);
+array.shift(detailOne);
+console.log(array);
+
+
+const createPerson = (name, age, isHands) => {
+    const userSchema = {
+        name, age, isHands
+    }
+    return userSchema
+}
+
+const personCreated = createPerson("Bode", 45, true);
+const personCreateds = createPerson("ola", 452, true);
+console.log(personCreated);
+console.log(personCreateds);
+
+//INHERITANCE => inheritance is the ability of a class to derive properties and xtics from another clsss, while having its own properties as well
+
+class Animal {
+    alive = true;
+
+    isBeautiful = "This animal is beautiful";
+
+    eat() {
+        console.log(`This ${this.name} can eat`)
+    }
+    
+    sleep() {
+        console.log(`This ${this.name} can sleep`)
+    }
+}
+
+class Rabbit extends Animal {
+    name = "Rabbit"
+
+    run() {
+        console.log(`This ${this.name} can run`)
+    }
+}
+
+const rabbit = new Rabbit()
+console.log(rabbit)
+rabbit.eat()
+rabbit.sleep()
+rabbit.run()
+
 
 
 
