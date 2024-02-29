@@ -88,7 +88,7 @@ const blueCar = new Car("Blue", "BMW", 4, "🚙");
 const redCar = new Car("Red", "Ferrari", 4, "🚗🏎️");
 
 //Class-Work
-function cohort1(name, age, favFood, phoneNo, baidayz) {
+function Cohort(name, age, favFood, phoneNo, baidayz) {
     this.name = name;
     this.age =age;
     this.favFood = favFood;
@@ -99,9 +99,82 @@ function cohort1(name, age, favFood, phoneNo, baidayz) {
 
 }
 
-const first_cohort = new cohort1("Ola", 30, "Semo", "080455453", new Date ("october 4, 1990"));
-const second_cohort = new cohort1("Akin", 20, "Amala", "080455553", new Date ("september 4, 1991"));
-const third_cohort = new cohort1("Wale", 25, "pounded_Yam", "090455553", new Date ("August 3, 1993"));
+const first_cohort = new Cohort("Ola", 30, "Semo", +23480455453, new Date ("october 4, 1990"));
+const second_cohort = new Cohort("Akin", 20, "Amala", +23480455553, new Date ("september 4, 1991"));
+const third_cohort = new Cohort("Wale", 25, "pounded_Yam", +23490455553, new Date ("August 3, 1993"));
+
+//Class_Keyword => this is a schemal for an object save many value
+// this can be declare in two ways ;
+// Class expression
+// Class declaration
+
+//Class-declaration
+ class Shape1 {
+    constructor(width, height) {
+        this.width = width;
+        this.height = height;
+
+        console.log(this)
+    }
+ }
+
+ const areas = new Shape1(10, 2);
+
+ //Class_Expression
+//  i---> anonymous
+ const Shape = class{
+    constructor(width, height) {
+        this.width = width;
+        this.height = height;
+
+        console.log(this)
+    }
+ }
+
+ const area1 = new Shape(10, 2);
+
+ // ii----> unanonymous
+ const BigBoy = class Bigie {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+
+        console.log(this)
+    }
+    // getter function
+    get him() {
+        return this.coder();
+    }
+
+    // method
+    coder() {
+        return {name: this.name, age: this.age}
+    }
+ }
+
+ const instance = new BigBoy("Paiko", 40)
+ console.log(instance.him)
+
+ 
+ //Exp. 2
+ const School = class Academy {
+    constructor(name, location) {
+        this.name = name;
+        this.location = location
+    }
+
+    get principal() {
+        return this.seniorBoy()
+    }
+
+    seniorBoy() {
+        return {name: this.name, location: this.location}
+    }
+ }
+
+ const headMaster = new School("Kenny", "PEGAMUT");
+ console.log(headMaster.principal);
+
 
 
 
