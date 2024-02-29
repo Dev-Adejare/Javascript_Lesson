@@ -11,5 +11,5 @@ const menuClicked = (curEl) => {
 }
 
 body1.appendChild(heading);
-heading.innerHTML = "We can be going home"
+heading.innerHTML = "Where are we haeding to in this country"
 
