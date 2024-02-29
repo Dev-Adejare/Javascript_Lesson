@@ -1,0 +1,4 @@
+OOP => Object Oriented Programming:
+
+Exercise
+With a function expression, calculate the area of a rectangle
