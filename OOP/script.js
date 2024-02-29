@@ -3,15 +3,15 @@
 //Question:With a function expression, calculate the area of a rectangle
 
 //Solution=>
-const calculateRectangleArea = function(length, width) {
-    return length * width;
-};
+// const calculateRectangleArea = function(lengths, width) {
+//     return lengths * width;
+// };
 
 
-const length = 5;
-const width = 10;
-const area = calculateRectangleArea(length, width);
-console.log("The area of the rectangle is: " + area);
+// const length = 5;
+// const width = 10;
+// const area = calculateRectangleArea(lengths, width);
+// console.log("The area of the rectangle is: " + area);
 
 
 //Object_Literal
@@ -152,8 +152,8 @@ const third_cohort = new Cohort("Wale", 25, "pounded_Yam", +23490455553, new Dat
     }
  }
 
- const instance = new BigBoy("Paiko", 40)
- console.log(instance.him)
+//  const instances = new BigBoy("Paiko", 40)
+//  console.log(instance.him)
 
  
  //Exp. 2
@@ -174,6 +174,28 @@ const third_cohort = new Cohort("Wale", 25, "pounded_Yam", +23490455553, new Dat
 
  const headMaster = new School("Kenny", "PEGAMUT");
  console.log(headMaster.principal);
+
+
+ //Exercise 2 =>
+ const Shapez = class RectShape {
+    constructor(length, breath) {
+        this.length = length;
+        this.breath = breath;
+
+    }
+
+    get method() {
+        return this.area();
+    
+    }
+    area() {
+        return {area: this.length * this.breath};
+    }
+ }
+
+ const Shap = new Shapez (20, 10);
+ console.log(Shap.method)
+
 
 
 
