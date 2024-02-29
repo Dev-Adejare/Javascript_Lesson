@@ -266,11 +266,22 @@ class Rabbit extends Animal {
     }
 }
 
+class Goat extends Animal{
+    name = "goat"
+}
+
 const rabbit = new Rabbit()
 console.log(rabbit)
 rabbit.eat()
 rabbit.sleep()
 rabbit.run()
+
+// Exp_2
+const goat = new Goat()
+goat.eat()
+goat.sleep()
+console.log(goat.isBeautiful)
+console.log(goat.alive)
 
 
 
