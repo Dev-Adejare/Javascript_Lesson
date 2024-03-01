@@ -310,7 +310,18 @@ console.log(y1)
       console.log(truck);
       console.log(truck.wheels);
       console.log(truck.engine());
-      const car =
+      
+      
+      const car = Object.create(vehicle);
+      car.doors = 4;
+      car.engine = function() {
+        return "Whoooosh!;"
+      };
+      console.log(car.engine());
+      console.log(car.wheels);
+      const tesla = Object.create(car);
+      console.log(tesla.wheels);
+      console.log(tesla.engine());
 
 
 
