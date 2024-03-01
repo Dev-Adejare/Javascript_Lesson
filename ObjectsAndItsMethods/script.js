@@ -276,6 +276,25 @@ console.log(y1)
       console.log(person1 !== otherPerson1);
 
 
+      //Video
+      //Objects
+      //Key-Value pairs in curly braces
+      const myObj = { name: "Dave" };
+
+      const anotherObj = {
+        alive: true,
+        answer: 42,
+        hobbies: ["Eat", "Sleep", "Code"],
+        beverages: {
+            morning: "Coffee",
+            afternoon: "Iced Tea"
+        },
+        
+       
+      };
+      console.log(anotherObj.beverages.morning);
+
+
 
 
 
