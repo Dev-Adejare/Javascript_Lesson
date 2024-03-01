@@ -289,10 +289,28 @@ console.log(y1)
             morning: "Coffee",
             afternoon: "Iced Tea"
         },
-        
+        action: function() {
+            return `Time for ${this.beverages.morning}`;
+        }
        
       };
-      console.log(anotherObj.beverages.morning);
+      console.log(anotherObj.action());
+
+
+      // New Exp
+      const vehicle = {
+        wheels: 4,
+        engine: function() {
+            return "Vrrooom!";
+        }
+      }
+
+      const truck = Object.create(vehicle);
+      truck.doors = 2;
+      console.log(truck);
+      console.log(truck.wheels);
+      console.log(truck.engine());
+      const car =
 
 
 
