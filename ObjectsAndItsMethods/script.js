@@ -322,6 +322,10 @@ console.log(y1)
       const tesla = Object.create(car);
       console.log(tesla.wheels);
       console.log(tesla.engine());
+      tesla.engine = function () {
+        return "shhhhhh....";
+      };
+      console.log(tesla.engine());
 
 
 
