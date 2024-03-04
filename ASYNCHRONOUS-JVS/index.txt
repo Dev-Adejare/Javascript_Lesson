@@ -1,0 +1,4 @@
+Asynchronous Jvs => this talks about ;
+Set Interval () :- allows to execute a chunk of code every time a specified amount of milli second passes.
+
+SetTimeout() :- is a function that allows to wait a certain amount of time before executing a chunk of code, do note that outside of timeout will continue execution as normal.
