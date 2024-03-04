@@ -27,27 +27,27 @@ functionOne();
 
 //Call-Back => A callback is a function passed as an argument to another function
 
-const fetchUser = (username) => {
-    setTimeout(() => {
-        return {user: username}
-    },2000);
+// const fetchuser = (username) => {
+//     setTimeout(() => {
+//         return {user: username}
+//     },2000);
    
-}
+// }
 
-const user = fetchUser('test');
-console.log(user);
+// const user = fetchUser('test');
+// console.log(user);
 
-const fetchUserOne = (username, callback) => {
-    setTimeout(() => {
-        console.log("Now we have the user");
-        callback({user: username})
+// const fetchUserOne = (username, callback) => {
+//     setTimeout(() => {
+//         console.log("Now we have the user");
+//         callback({user: username})
 
-    }, 2000);
-}
+//     }, 2000);
+// }
 
-const user2 = fetchUserOne("Adejare", (user2) => {
-    console.log(user2);
-})
+// const user2 = fetchUserOne("Adejare", (user2) => {
+//     console.log(user2);
+// })
 
 //Callback Hell =>  
 
@@ -58,30 +58,30 @@ const fetchUserTwo = (username, callback) => {
     },2000)
 }
 
-const fetchUserPhotos = (username, callback) => {
-    setTimeout(() => {
-        console.log(`Now we have the photo for ${username}`)
-        callback(["photo1", "photo2"]);
-    },2000)
-}
+// const fetchUserPhotos = (username, callback) => {
+//     setTimeout(() => {
+//         console.log(`Now we have the photo for ${username}`)
+//         callback(["photo1", "photo2"]);
+//     },2000)
+// }
 
-const fetchUserPhotoDetails = (photo, callback) => {
-    setTimeout(() => {
-        console.log(`Now we have the photos details ${photo}`)
-        callback("details");
+// const fetchUserPhotoDetails = (photo, callback) => {
+//     setTimeout(() => {
+//         console.log(`Now we have the photos details ${photo}`)
+//         callback("details");
 
-    },2000)
-}
+//     },2000)
+// }
 
-const user3 = fetchUserTwo("Michael", (user) => {
-    console.log(`Your name is: ${user.username}`);
-    fetchUserPhotos(user.username, (userPhotos) => {
-        console.log(`Your photo are: ${userPhotos}`);
-        fetchUserPhotoDetails(userPhotos[0], (details) => {
-            console.log(`Your photo detals are: ${details}`);
-        });
-    });
-});
+// const user3 = fetchUserTwo("Michael", (user) => {
+//     console.log(`Your name is: ${user.username}`);
+//     fetchUserPhotos(user.username, (userPhotos) => {
+//         console.log(`Your photo are: ${userPhotos}`);
+//         fetchUserPhotoDetails(userPhotos[0], (details) => {
+//             console.log(`Your photo detals are: ${details}`);
+//         });
+//     });
+// });
 
 //This is called callback Hell. It becomes unreadable
 
@@ -101,4 +101,52 @@ const user4 = fetchUserTwo("Michael", (user) => {
 })
 
 
+//PROMISE =>
+const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        console.log("Now we are in Promise Land");
+
+        resolve({username: "Bode"});
+        reject("User not found")
+    },5000);
+        
+})
+promise
+.then((user) => console.log(user.username))
+.catch((error) => console.log(error));
+
+
+// Using Promise to resolve the above issue;
+
+const fetchUser = (username) => {
+    return new Promise((resolve, reject) => {
+    setTimeout(() => {
+        console.log("we are using Promise");
+        resolve(username)
+    }, 4000);
+    })
+}
+
+const fetchUserPhotos = (username) => {
+    return new Promise((resolve, reject) => {
+    setTimeout(() => {
+        console.log("we have the photos");
+        resolve(["photo1", "photo2"])
+    }, 4000);
+    })
+}
+
+const fetchUserDeatails = (photo) => {
+    return new Promise((resolve, reject) => {
+    setTimeout(() => {
+        console.log("Now we have the photo details");
+        resolve("details");
+    }, 4000);
+    })
+}
+
+fetchUser("Zainab")
+.then((user) => fetchUserPhotos (user))
+.then((photos) => fetchUserPhotos(photos[0]))
+.then((details) => console.log(details))
 

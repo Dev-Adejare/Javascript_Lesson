@@ -27,3 +27,14 @@ The phenomenon which happens when we nest multiple callbacks within a function i
 
  The callback hell in JavaScript is referred to as a situation where an excessive amount of nested callback functions are being executed. 
  It reduces code readability and maintenance.
+
+
+ fetchUserTwo("Michael", (user) => {...}): initiates the process by fetching a user with the username "Michael”.
+
+fetchUserPhotos(user.username, (userPhotos) => {...}): Upon receiving the user data, this function fetches the photos associated with the user.
+
+fetchUserPhotoDetails(userPhotos[0], (details) => {...}): This fetches the details of the first photo retrieved.
+
+The next three lines are repeatedly written to fetch details of the first photo (userPhotos[0]) multiple times.
+
+console.log(details) outputs the details of the first photo to the console.
