@@ -2,3 +2,25 @@ Asynchronous Jvs => this talks about ;
 Set Interval () :- allows to execute a chunk of code every time a specified amount of milli second passes.
 
 SetTimeout() :- is a function that allows to wait a certain amount of time before executing a chunk of code, do note that outside of timeout will continue execution as normal.
+
+//SYNCHRONOUS-JVS => is the one which the code is executed line by line & there task are completed instantly.
+
+
+//CALL-BACK
+A callback is a function passed as an argument to another function
+This technique allows a function to call another function
+A callback function can run after another function has finished
+
+//API => Application Programming Interface
+When to Use a Callback?
+The examples above are not very exciting.
+
+They are simplified to teach you the callback syntax.
+Where callbacks really shine are in asynchronous functions, 
+where one function has to wait for another function 
+(like waiting for a file to load).
+
+Callback Hell
+The phenomenon which happens when we nest multiple callbacks within a function is called a callback hell.
+ The shape of the resulting code structure resembles a pyramid and hence callback hell is also called the “pyramid of the doom”. 
+ It makes the code very difficult to understand and maintain.
