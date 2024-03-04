@@ -54,33 +54,51 @@ const user2 = fetchUserOne("Adejare", (user2) => {
 const fetchUserTwo = (username, callback) => {
     setTimeout(() => {
         console.log("Now we have the user")
-        callback(username);
+        callback({username}); 
     },2000)
 }
 
 const fetchUserPhotos = (username, callback) => {
     setTimeout(() => {
-        console.log("Now we have the photo details")
+        console.log(`Now we have the photo for ${username}`)
         callback(["photo1", "photo2"]);
     },2000)
 }
 
 const fetchUserPhotoDetails = (photo, callback) => {
     setTimeout(() => {
-        console.log("Now we have the photos")
-        callback(photo);
+        console.log(`Now we have the photos details ${photo}`)
+        callback("details");
 
     },2000)
 }
 
-const user3 = fetchUserTwo("test", (username) => {
-    console.log(username);
-    fetchUserPhotos(username, (userPhotos) => {
-        console.log(userPhotos);
+const user3 = fetchUserTwo("Michael", (user) => {
+    console.log(`Your name is: ${user.username}`);
+    fetchUserPhotos(user.username, (userPhotos) => {
+        console.log(`Your photo are: ${userPhotos}`);
         fetchUserPhotoDetails(userPhotos[0], (details) => {
-            console.log(details);
-    });
+            console.log(`Your photo detals are: ${details}`);
+        });
     });
 });
+
+//This is called callback Hell. It becomes unreadable
+
+const user4 = fetchUserTwo("Michael", (user) => {
+    fetchUserPhotos(user.username, (userPhotos) => {
+        fetchUserPhotoDetails(userPhotos[0], (details) => {
+            fetchUserPhotoDetails(userPhotos[0], (details) => {
+                fetchUserPhotoDetails(userPhotos[0], (details) => {
+                    fetchUserPhotoDetails(userPhotos[0], (details) => {
+                        console.log(details);
+
+                    })
+                })
+            })
+        })
+    })
+})
+
 
 

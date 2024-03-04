@@ -24,3 +24,6 @@ Callback Hell
 The phenomenon which happens when we nest multiple callbacks within a function is called a callback hell.
  The shape of the resulting code structure resembles a pyramid and hence callback hell is also called the “pyramid of the doom”. 
  It makes the code very difficult to understand and maintain.
+
+ The callback hell in JavaScript is referred to as a situation where an excessive amount of nested callback functions are being executed. 
+ It reduces code readability and maintenance.
