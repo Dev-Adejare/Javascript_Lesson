@@ -39,7 +39,7 @@ let questions = [
       }
 ]
 
-const CORRECT_BONUS =10;
+const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 3;
 
 // Start Quiz
@@ -57,6 +57,24 @@ const getNewQuestion = () => {
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
     progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`
 
+    const questionIndex = Math.floor(Math.random() * availableQuestion.length);
+    currentQuestion = availableQuestion[questionIndex];
+    question.innerText = currentQuestion.question
+
+    choices.forEach((choice) => {
+        const number = choice.dataset["number"];
+        choice.innerText = currentQuestion["choice" + number]
+    })
+
+    availableQuestion.splice(questionIndex, 1);
+    acceptingAnswer = true;
+
 }
+
+choices.forEach((choice) => {
+  choice.addEventListener('click', (e) => {
+    e.preventDefault();
+  })
+})
 
 startGame();
