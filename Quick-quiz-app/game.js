@@ -54,7 +54,8 @@ const startGame = () => {
 
 const getNewQuestion = () => {
   if(availableQuestion.length === 0 || questionCounter >= MAX_QUESTIONS) {
-    return window.location.assign
+    localStorage.setItem("mostRecentScore", score);
+    return window.location.assign("./end.html")
   }
     questionCounter++;
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
@@ -68,7 +69,6 @@ const getNewQuestion = () => {
         const number = choice.dataset["number"];
         choice.innerText = currentQuestion["choice" + number]
     })
-// thursday class start
     availableQuestion.splice(questionIndex, 1);
     acceptingAnswer = true;
 
