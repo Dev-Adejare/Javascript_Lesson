@@ -4,6 +4,7 @@ const progressText = document.getElementById ('progressText');
 const scoreText = document.getElementById('score');
 const progressBarFull = document.getElementById('progressBarFull');
 const game = document.getElementById('game');
+const loader = document.getElementById('loader');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
 
 let currentQuestion = {};
@@ -12,35 +13,47 @@ let score = 0;
 let currentCounter = 0;
 let availableQuestion = [];
 
-let questions = [
-    {
-        "question": "Inside which HTML element do we put the JavaScript?",
-        "choice1": "<script>",
-        "choice2": "<javascript>",
-        "choice3": "<js>",
-        "choice4": "<scripting>",
-        "answer": 1
-      },
-      {
-        "question": "What is the correct syntax for referring to an external script called 'xxx.js'?",
-        "choice1": "<script href='xxx.js'>",
-        "choice2": "<script name='xxx.js'>",
-        "choice3": "<script src='xxx.js'>",
-        "choice4": "<script file='xxx.js'>",
-        "answer": 3
-      },
-      {
-        "question": " How do you write 'Hello World' in an alert box?",
-        "choice1": "msgBox('Hello World');",
-        "choice2": "alertBox('Hello World');",
-        "choice3": "msg('Hello World');",
-        "choice4": "alert('Hello World');",
-        "answer": 4
-      }
-]
+let questions = [];
+
+fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple"
+)
+.then((res) => {
+  return res.json();
+})
+.then((loadingQuestions) => {
+  questions = loadingQuestions.results.map((loadingQuestion) => {
+    const formattedQuestion = {
+      question: loadingQuestion.question,
+    };
+
+    const answerChoices = [...loadingQuestion.incorrect_answers];
+    formattedQuestion.answer = Math.floor(Math.random() * answerChoices.length) + 1;
+    answerChoices.splice(
+      formattedQuestion.question - 1,
+      0,
+      loadingQuestion.correct_answer
+    );
+
+    answerChoices.forEach((choice, i) => {
+      formattedQuestion["choice" + (i + 1)] = choice;
+    });
+
+    return formattedQuestion;
+  });
+
+ 
+  startGame();
+ 
+})
+.catch((err) => {
+  console.log(err);
+});
+ 
+ 
+  
 
 const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 3;
+const MAX_QUESTIONS = 7;
 
 // Start Quiz
 
@@ -48,9 +61,14 @@ const startGame = () => {
     questionCounter = 0;
     score = 0;
     availableQuestion = [...questions];
-    console.log(availableQuestion);
-    getNewQuestion()
-};
+    // console.log(availableQuestion);
+    
+
+    game.classList.remove("hidden");
+    loader.classList.add("hidden");
+    getNewQuestion();
+  };
+    
 
 const getNewQuestion = () => {
   if(availableQuestion.length === 0 || questionCounter >= MAX_QUESTIONS) {
@@ -106,6 +124,6 @@ const incrementScore = (num) => {
   scoreText.innerText = score
 }
 
-startGame();
+// startGame();
 
 
