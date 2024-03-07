@@ -1,7 +1,7 @@
 // Get Elements with DOM ----> Create an array of Questions.
 const question = document.getElementById('question');
 const progressText = document.getElementById ('progressText');
-const scoreText = document.getElementsByClassName('score');
+const scoreText = document.getElementById('score');
 const progressBarFull = document.getElementById('progressBarFull');
 const game = document.getElementById('game');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
@@ -53,6 +53,9 @@ const startGame = () => {
 };
 
 const getNewQuestion = () => {
+  if(availableQuestion.length === 0 || questionCounter >= MAX_QUESTIONS) {
+    return window.location.assign
+  }
     questionCounter++;
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
     progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`
@@ -65,7 +68,7 @@ const getNewQuestion = () => {
         const number = choice.dataset["number"];
         choice.innerText = currentQuestion["choice" + number]
     })
-
+// thursday class start
     availableQuestion.splice(questionIndex, 1);
     acceptingAnswer = true;
 
@@ -74,7 +77,35 @@ const getNewQuestion = () => {
 choices.forEach((choice) => {
   choice.addEventListener('click', (e) => {
     e.preventDefault();
-  })
-})
+
+    if(!acceptingAnswer) return;
+
+    const selectedChoice = e.target;
+    const selectedAnswer = selectedChoice.dataset["number"];
+
+    const classToApply = 
+    selectedAnswer == currentQuestion.answer ? "correct" : "inCorrect";
+
+    if(classToApply === "correct") {
+      incrementScore(CORRECT_BONUS);
+    }
+
+    selectedChoice.parentElement.classList.add(classToApply);
+
+    setTimeout(() => {
+      selectedChoice.parentElement.classList.remove(classToApply);
+      getNewQuestion()
+    },1000)
+    
+
+  });
+});
+
+const incrementScore = (num) => {
+  score +=num;
+  scoreText.innerText = score
+}
 
 startGame();
+
+
