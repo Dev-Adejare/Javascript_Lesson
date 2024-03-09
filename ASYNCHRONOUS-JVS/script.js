@@ -336,6 +336,12 @@ console.log(absolute);
 const random = Math.random();
 console.log(random)
 
+const trunc = Math.trunc(4.9);
+console.log(trunc);
+
+const cos = Math.cos(0 * Math.PI / 180);
+console.log(cos)     // returns 1 (the cos of 0 degrees)
+
 // Math.E        // returns Euler's number
 // Math.PI       // returns PI
 // Math.SQRT2    // returns the square root of 2
