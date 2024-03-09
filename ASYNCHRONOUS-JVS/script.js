@@ -342,6 +342,9 @@ console.log(trunc);
 const cos = Math.cos(0 * Math.PI / 180);
 console.log(cos)     // returns 1 (the cos of 0 degrees)
 
+const log = Math.log(2);
+console.log(log) //returns the natural logarithm of 2.
+
 // Math.E        // returns Euler's number
 // Math.PI       // returns PI
 // Math.SQRT2    // returns the square root of 2
