@@ -32,7 +32,7 @@ for (; i < len; ) {
   console.log(cars)
 }
 
-for (let i = 1; i < 8; i++){
+for (let i = 1; i < 15; i++){
   console.log(i)
 };
 
