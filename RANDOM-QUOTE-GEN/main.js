@@ -15,7 +15,19 @@ function newQuote() {
     const quote = apiQuote[Math.floor(Math.random() * apiQuote.length)];
     console.log(quote);
 
-    authorName.textContent = quote.author
+    if(!quote.author) {
+        authorName.textContent = 'unknown'
+    }else {
+        authorName.textContent = quote.author
+    }
+
+    //Check quote length to determine the styling
+    if(quote.text.length > 50) {
+        quoteText.classList.add('long-quote')
+    }else {
+        quoteText.classList.remove('long-quote')  
+    } 
+    
     quoteText.textContent = quote.text
 
 }
@@ -35,5 +47,7 @@ async function getQuotes() {
     }
 }
 
+//Event Listeners
+newQuoteBtn.addEventListener('click', newQuote)
 getQuotes()
 
