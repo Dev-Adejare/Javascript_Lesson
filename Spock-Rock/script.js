@@ -36,6 +36,8 @@ function resetSelected() {
   allGameIcons.forEach((icon) => {
     icon.classList.remove("selected");
   });
+  stopConfettiInner();
+  removeConfettiInner();
 }
 
 // Game Reset
@@ -67,6 +69,9 @@ function computerRandomChoice() {
   }
 }
 
+
+//Updating Scores
+
 function updateScores(playerChoice) {
   console.log(playerChoice, computerChoice);
   if (playerChoice === computerChoice) {
@@ -75,6 +80,7 @@ function updateScores(playerChoice) {
     const choice = choices[playerChoice];
     console.log(choice.defeat.indexOf(computerChoice));
     if (choice.defeat.indexOf(computerChoice) > -1) {
+        startConfetti();
       resultText.textContent = "You Won!!!";
       playerScoreNumber++;
       playerScoreEl.textContent = playerScoreNumber;
@@ -248,7 +254,7 @@ function stopConfettiInner() {
 }
 
 function removeConfettiInner() {
-  stopConfetti();
+  stopConfettiInner();
   particles = [];
 }
 
@@ -298,4 +304,4 @@ function updateParticles() {
   }
 }
 
-startConfetti();
+
