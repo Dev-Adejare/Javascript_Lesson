@@ -66,3 +66,27 @@ button {
     box-shadow: 0 0.3rem rgb(121, 121, 121, 0.65);
     border-radius: 10px;
 }
+
+button:hover {
+    filter: brightness(110%);
+}
+
+button:active {
+    transform: translate(0, 0.3rem);
+}
+
+.twitterButton:hover {
+    color: #000;
+    background-color: #b6b2b2;
+}
+
+@media screen and(max-width:1000px){
+    .quoteContainer{
+        margin: auto 10px;
+    }
+
+    .quoteText{
+        font-size: 2.2rem;
+    }
+    
+}
