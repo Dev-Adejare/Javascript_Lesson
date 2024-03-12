@@ -158,3 +158,6 @@ function displayComputerChoice () {
         break;
     }
 }
+
+//ResetAll game to initial state
+resetAll()
