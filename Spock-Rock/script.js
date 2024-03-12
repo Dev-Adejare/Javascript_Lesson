@@ -210,20 +210,7 @@ function startConfettiInner() {
       }
     );
   })();
-  // var canvas = document.getElementById("confetti-canvas");
-  // if (canvas === null) {
-  // 	canvas = document.createElement("canvas");
-  // 	canvas.setAttribute("id", "confetti-canvas");
-  // 	canvas.setAttribute("style", "display:block;z-index:999999;pointer-events:none");
-  // 	document.body.appendChild(canvas);
-  // 	canvas.width = width;
-  // 	canvas.height = height;
-  // 	window.addEventListener("resize", function() {
-  // 		canvas.width = window.innerWidth;
-  // 		canvas.height = window.innerHeight;
-  // 	}, true);
-  // }
-
+  
   var canvas = document.getElementById("confetti-canvas");
   if (canvas === null) {
     canvas = document.createElement("canvas");
