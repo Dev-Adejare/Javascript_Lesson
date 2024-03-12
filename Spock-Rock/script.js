@@ -217,6 +217,9 @@ function startConfettiInner() {
     );
   })();
   
+
+  //VAR-CANVAS style bring from outside API to bring in the bubble style to the game anytime we won!!!
+
   var canvas = document.getElementById("confetti-canvas");
   if (canvas === null) {
     canvas = document.createElement("canvas");
