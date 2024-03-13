@@ -36,13 +36,21 @@
                 </label>
                 <input type="email" id="email" placeholder="email@address.com" required name="email">
             </div>
+           
+            <!-- Website URL-->
+            <div class="form-group">
+                <label for="website">
+                   Website URL
+                </label>
+                <input type="url" id="website" placeholder="http://dltafrica.io" required name="Website">
+            </div>
             
             <!-- Password -->
             <div class="form-group">
-                <label for="name">
-                    Full Name
+                <label for="password1">
+                    Password
                 </label>
-                <input type="text" id="name" placeholder="Full Name" name="name" required minlength="3" maxlength="100">
+                <input type="password" id="password1" placeholder="Create password (Min. 8 characters)" name="name" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" title="Please include at least one Uppercase character, one lowercase character, and one number.">
             </div>
             
             <!-- Confirm Password -->
