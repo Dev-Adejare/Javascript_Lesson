@@ -52,17 +52,22 @@
                 </label>
                 <input type="password" id="password1" placeholder="Create password (Min. 8 characters)" name="name" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" title="Please include at least one Uppercase character, one lowercase character, and one number.">
             </div>
-            
+           
             <!-- Confirm Password -->
             <div class="form-group">
-                <label for="name">
-                    Full Name
+                <label for="password2">
+                    Confirm Password
                 </label>
-                <input type="text" id="name" placeholder="Full Name" name="name" required minlength="3" maxlength="100">
+                <input type="password" id="password2" placeholder="Confirm Password " name="name" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
             </div>
+        </form>
+
+        <button type="submit">Register</button>
+        <h3 id="message">Don't Hesitate</h3>
+            
+            
 
           
-        </form>
     </div>
 
     <script src="app.js"></script>
