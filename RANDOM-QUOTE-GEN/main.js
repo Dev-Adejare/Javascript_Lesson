@@ -25,8 +25,8 @@ function loading() {
 function complete(){
     quoteCon.hidden = false;
     loader.hidden = true;
-
 }
+
 
 
 function newQuote() {

@@ -15,7 +15,26 @@ const loader = document.getElementById('loader');
 
 //https://api.quotable.io/random
 
+
+//Show Loading
+
+const showLoading = () => {
+    loader.hidden = false;
+    quoteCon.hidden = true;
+}
+
+//Hide Loading
+
+const hideLoading = () => {
+   if(!loader.hidden) {
+    quoteCon.hidden = false;
+    loader.hidden = true;
+   }
+}
+
 const getQuote = async() => {
+
+    showLoading()
     const apiUrl = 'https://api.quotable.io/random';
 
     try {
@@ -40,8 +59,11 @@ const getQuote = async() => {
 
         authorName.innerText = data.author;
         quoteText.innerText = data.content;
+
+        hideLoading()
     }catch(error) {
         console.log('Error fetching quote', error)
+        getQuote()// retry fetching quote
     }
 }
 
