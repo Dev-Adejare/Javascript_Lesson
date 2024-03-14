@@ -51,12 +51,23 @@ const validateForm = () => {
     }
 }
 
+const storeFormData = () => {
+    const user = {
+        name: form.name.value,
+        phone: form.phone.value,
+        email: form.email.value,
+        website: form.website.value,
+        password: form.password.value
+    };
+    console.log(user)
+    
+}
 
 const processFormData = (e) => {
     e.preventDefault();
     // console.log(e)
 
-    validateForm();  // Submit Data if Valid
+    validateForm();  // Submit Data if Valid___we put this here to enable us submit form once the form requirements are met
 
 }
 
