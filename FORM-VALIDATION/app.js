@@ -29,15 +29,15 @@ const validateForm = () => {
 
     if(password1El.value === password2El.value) {
         passwordMatch = true;
-        password1El.style.borderColor = "green";
-        password2El.style.borderColor = "green";
+        password1El.style.borderColor = "green !important";
+        password2El.style.borderColor = "green !important";
     }else{
         passwordMatch = false;
         message.textContent = "Make sure password match"
         message.style.borderColor = "red";
         message.style.color = "red";
-        password1El.style.borderColor = "red";
-        password2El.style.borderColor = "red";
+        password1El.style.borderColor = "red !important";
+        password2El.style.borderColor = "red !important";
         return
     }
 
@@ -59,7 +59,7 @@ const storeFormData = () => {
         website: form.website.value,
         password: form.password.value
     };
-    console.log(user)
+    console.log(user)  // this is for us to have the object output inside the console
     
 }
 
@@ -71,6 +71,7 @@ const processFormData = (e) => {
    
     if(isValid && passwordMatch) {
         storeFormData();
+        form.reset();  // allows clear all the inputs information after submission
     }
 
 }
