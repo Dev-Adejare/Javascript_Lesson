@@ -43,11 +43,11 @@ const validateForm = () => {
 
     //Check to see if Form is valid and password Match
 
-    if(isValid) {
+    if(isValid && passwordMatch) {
         message.textContent = "Successfully Registerd!";
-        passwordMatch = true;
         message.style.color = "green";
-        messageContainer.style.borderColor = "green"
+        messageContainer.style.borderColor = "green"  // This shows success message if valid & brings otherwise if not match
+       
     }
 }
 
@@ -56,7 +56,7 @@ const processFormData = (e) => {
     e.preventDefault();
     // console.log(e)
 
-    validateForm();
+    validateForm();  // Submit Data if Valid
 
 }
 
