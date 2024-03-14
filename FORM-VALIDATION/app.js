@@ -21,7 +21,7 @@ const validateForm = () => {
     if(!isValid) {
         message.textContent = "Please fill out the field";
         message.style.color = "red";
-        message.container.style.borderColor = "red"
+        messageContainer.style.borderColor = "red"
         return
     }
 
@@ -32,7 +32,22 @@ const validateForm = () => {
         password1El.style.borderColor = "green";
         password2El.style.borderColor = "green";
     }else{
-        
+        passwordMatch = false;
+        message.textContent = "Make sure password match"
+        message.style.borderColor = "red";
+        message.style.color = "red";
+        password1El.style.borderColor = "red";
+        password2El.style.borderColor = "red";
+        return
+    }
+
+    //Check to see if Form is valid and password Match
+
+    if(isValid) {
+        message.textContent = "Successfully Registerd!";
+        passwordMatch = true;
+        message.style.color = "green";
+        messageContainer.style.borderColor = "green"
     }
 }
 
@@ -40,6 +55,8 @@ const validateForm = () => {
 const processFormData = (e) => {
     e.preventDefault();
     // console.log(e)
+
+    validateForm();
 
 }
 
