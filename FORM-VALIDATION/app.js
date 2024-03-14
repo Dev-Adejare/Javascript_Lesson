@@ -29,6 +29,9 @@ const validateForm = () => {
 
     if(password1El.value === password2El.value) {
         passwordMatch = true;
+        password1El.style.borderColor = "green";
+        password2El.style.borderColor = "green";
+    }else{
         
     }
 }
