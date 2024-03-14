@@ -28,7 +28,7 @@ body {
 
 /* FORM */
 
-.form {
+form {
     width: 90%;
     position: relative;
 }
@@ -66,11 +66,11 @@ button {
     background-color: black;
     color: white;
     border-radius: 5px;
-    font-weight: 400;
     font-size: 20px;
     cursor: pointer;
     margin-top: 5px;
     letter-spacing: 3px;
+   
 }
 
 button:hover {
@@ -80,6 +80,17 @@ button:hover {
 
 button:focus {
     outline: none;
+}
+
+.message-container {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 90%;
+    
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    color: black;
 }
     
 
