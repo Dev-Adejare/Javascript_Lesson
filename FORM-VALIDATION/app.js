@@ -67,7 +67,11 @@ const processFormData = (e) => {
     e.preventDefault();
     // console.log(e)
 
-    validateForm();  // Submit Data if Valid___we put this here to enable us submit form once the form requirements are met
+    validateForm();  // Submit Data if Valid___we put this here to enable us submit form once the form requirements are met.
+   
+    if(isValid && passwordMatch) {
+        storeFormData();
+    }
 
 }
 
