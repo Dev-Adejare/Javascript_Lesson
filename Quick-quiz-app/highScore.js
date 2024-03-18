@@ -4,6 +4,6 @@ const list = document.createElement("li"); // here, we create list so as for it 
 
 highScoresList.innerHTML = highScores
   .map((score) => {
-    return `<li class= "high-score">${score.name} - ${score.score}</li>`; //here, we create
+    return `<li class= "high-score">${score.name} - ${score.score}</li>`; //here, we create score.name to display the name of the player and score.score to display the scores number
   })
   .join(""); //score here is just a varaible name, we can use anything.

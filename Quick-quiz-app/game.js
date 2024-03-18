@@ -26,18 +26,19 @@ fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=mul
       question: loadingQuestion.question,
     };
 
-    const answerChoices = [...loadingQuestion.incorrect_answers];
-    formattedQuestion.answer = Math.floor(Math.random() * answerChoices.length) + 1;
+    const answerChoices = [...loadingQuestion.incorrect_answers]; //this create a new array that will specify all the incorrect answer & put inside an array
+   
+    formattedQuestion.answer = Math.floor(Math.random() * answerChoices.length) + 1;  //
     
     answerChoices.splice(
       formattedQuestion.answer - 1,
       0,
       loadingQuestion.correct_answer
-    );
+    );                                //splice is use here to insert the correct answer into the answer choices, answechoices is a variable
 
     answerChoices.forEach((choice, i) => {
-      formattedQuestion["choice" + (i + 1)] = choice;
-    });
+      formattedQuestion["choice" + (i + 1)] = choice;   // i + 1 is added here to let us know that the choice start from 1-4 
+    });                                        // here we map through the answer choices to get the correct answer from the incorrect answers
 
     return formattedQuestion;
   });
@@ -75,8 +76,9 @@ const getNewQuestion = () => {
   if(availableQuestion.length === 0 || questionCounter >= MAX_QUESTIONS) {
     localStorage.setItem("mostRecentScore", score);
     return window.location.assign("./end.html")
-  }
-    questionCounter++;
+  }                                              //
+    
+  questionCounter++;
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
     progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`
 
@@ -103,10 +105,10 @@ choices.forEach((choice) => {
     const selectedAnswer = selectedChoice.dataset["number"];
 
     const classToApply = 
-    selectedAnswer == currentQuestion.answer ? "correct" : "inCorrect";
+    selectedAnswer == currentQuestion.answer ? "correct" : "inCorrect";  //this if the answer we slect is correct and if yes it'll apply the correct choice (green color) to the element & if no it apply red color
 
     if(classToApply === "correct") {
-      incrementScore(CORRECT_BONUS);
+      incrementScore(CORRECT_BONUS);  // this add the bonus 10
     }
 
     selectedChoice.parentElement.classList.add(classToApply);
@@ -122,7 +124,7 @@ choices.forEach((choice) => {
 
 const incrementScore = (num) => {
   score +=num;
-  scoreText.innerText = score
+  scoreText.innerText = score  // this is what shows the score num on the quiz app
 }
 
 // startGame();
