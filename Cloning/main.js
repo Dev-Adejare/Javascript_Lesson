@@ -153,14 +153,6 @@ newDetails.car.color = "Blue";
 console.log(details.car.color);
 console.log(newDetails.car.color);
 
-// const newDetails = {...details};
-// newDetails.firstName = "Mike";
-
-// newDetails.car.color = "blue";
-
-
-// console.log(details);
-// console.log(newDetails);
 
 
 const originalobj = {
