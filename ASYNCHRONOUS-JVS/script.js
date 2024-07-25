@@ -1,20 +1,4 @@
-// "Use Strict"
 
-// // // const interval = setInterval(() => console.log("Hello World"), 1000);
-// // // clearInterval(interval);
-
-// // // const myInterval = setTimeout(() => console.log ("Hello World"), 1000);
-// // // console.log(myInterval)
-
-// // //SYNCHRONOUS-JVS => is the one which the code is executed line by line & there task are completed instantly.
-
-// const functionOne = () => {
-//     console.log("Function One")
-
-//     functionTwo();
-//     console.log("FunctionOne, PartTwo")
-
-// }
 
 // const functionTwo = () => {
 //     setTimeout (() => console.log ("Function Two"), 2000);
@@ -24,12 +8,7 @@
 
 // // //Call-Back => A callback is a function passed as an argument to another function
 
-// const fetchuser = (username) => {
-//     setTimeout(() => {
-//         return {user: username}
-//     },2000);
 
-// }
 
 // // const user = fetchUser('test');
 // // console.log(user);
