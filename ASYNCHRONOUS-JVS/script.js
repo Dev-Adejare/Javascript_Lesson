@@ -1,4 +1,4 @@
-// "use strict"
+// "Use Strict"
 
 // // // const interval = setInterval(() => console.log("Hello World"), 1000);
 // // // clearInterval(interval);
