@@ -55,15 +55,14 @@
 //     },2000)
 // }
 
+// // const fetchUserPhotos = (username, callback) => {
+// //     setTimeout(() => {
+// //         console.log(`Now we have the photo for ${username}`)
+// //         callback(["photo1", "photo2"]);
+// //     },2000)
+// // }
 
 
-// const fetchUserPhotoDetails = (photo, callback) => {
-//     setTimeout(() => {
-//         console.log(`Now we have the photos details ${photo}`)
-//         callback("details");
-
-//     },2000)
-// }
 
 // const user3 = fetchUserTwo("Michael", (user) => {
 //     console.log(`Your name is: ${user.username}`);
