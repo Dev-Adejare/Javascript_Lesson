@@ -62,7 +62,13 @@
 // //     },2000)
 // // }
 
+// const fetchUserPhotoDetails = (photo, callback) => {
+//     setTimeout(() => {
+//         console.log(`Now we have the photos details ${photo}`)
+//         callback("details");
 
+//     },2000)
+// }
 
 // const user3 = fetchUserTwo("Michael", (user) => {
 //     console.log(`Your name is: ${user.username}`);
@@ -76,20 +82,7 @@
 
 // // //This is called callback Hell. It becomes unreadable
 
-// // const user4 = fetchUserTwo("Michael", (user) => {
-// //     fetchUserPhotos(user.username, (userPhotos) => {
-// //         fetchUserPhotoDetails(userPhotos[0], (details) => {
-// //             fetchUserPhotoDetails(userPhotos[0], (details) => {
-// //                 fetchUserPhotoDetails(userPhotos[0], (details) => {
-// //                     fetchUserPhotoDetails(userPhotos[0], (details) => {
-// //                         console.log(details);
 
-// //                     })
-// //                 })
-// //             })
-// //         })
-// //     })
-// // })
 
 // // //PROMISE =>
 // const promise = new Promise((resolve, reject) => {
