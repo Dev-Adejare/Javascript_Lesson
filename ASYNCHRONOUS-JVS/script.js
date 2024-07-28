@@ -82,7 +82,20 @@
 
 // // //This is called callback Hell. It becomes unreadable
 
+// // const user4 = fetchUserTwo("Michael", (user) => {
+// //     fetchUserPhotos(user.username, (userPhotos) => {
+// //         fetchUserPhotoDetails(userPhotos[0], (details) => {
+// //             fetchUserPhotoDetails(userPhotos[0], (details) => {
+// //                 fetchUserPhotoDetails(userPhotos[0], (details) => {
+// //                     fetchUserPhotoDetails(userPhotos[0], (details) => {
+// //                         console.log(details);
 
+// //                     })
+// //                 })
+// //             })
+// //         })
+// //     })
+// // })
 
 // // //PROMISE =>
 // const promise = new Promise((resolve, reject) => {
