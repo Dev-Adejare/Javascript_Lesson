@@ -131,14 +131,7 @@
 //     })
 // }
 
-// const fetchUserDeatails = (photo) => {
-//     return new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//         console.log("Now we have the photo details");
-//         resolve("details");
-//     }, 4000);
-//     })
-// }
+
 
 // fetchUser("Zainab")
 // .then((user) => fetchUserPhotos (user))
