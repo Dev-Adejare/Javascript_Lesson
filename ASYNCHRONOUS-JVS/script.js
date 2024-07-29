@@ -131,6 +131,7 @@
 //     })
 // }
 
+// const fetchUserDeatails = (photo) => {
 
 
 // fetchUser("Zainab")
