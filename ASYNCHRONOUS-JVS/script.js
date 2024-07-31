@@ -147,28 +147,7 @@
 
 // //Async & await
 
-//Example1
 
-// const myUsers = {
-//   userList: [],
-// };
-
-// const myFoolFunc = async () =>{
-//     const response = await fetch('https://jsonplaceholder.typicode.com/users');
-//     const fetchJson = await response.json();
-//     console.log(fetchJson);
-//     // return fetchJson
-// }
-
-// myFoolFunc()
-
-// const anotherFn = async () => {
-//     const data = await myFoolFunc ();
-//     myUsers.userList = data
-//     console.log(myUsers.userList)
-// }
-// anotherFn()
-// console.log(myUsers.userList)
 
 // Example2
 const getAllUsersEmail = async () => {
